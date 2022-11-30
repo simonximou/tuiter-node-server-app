@@ -28,14 +28,11 @@ const deleteTuit = async (req, res) => {
 }
 
 
-const findTuits = async (req, res) => {
-    try {
-        const tuits = await tuitsDao.findTuits();
-        res.json(tuits);
-    } catch (err) {
-        res.sendStatus(503);
-    }
-};
+const findTuits = async(req, res) =>{
+    const tuits = await tuitsDao.findTuits()
+    res.json(tuits);
+}
+
 
 
 export default (app) => {
